@@ -1,79 +1,20 @@
-// input 
+var days = document.getElementById("days")
+var hours = document.getElementById("hours")
+var minutes = document.getElementById("minutes")
+var seconds = document.getElementById("seconds")
 
-var screen = document.getElementById("screen")
-console.log(screen.innerHTML)
-
-//numbers
-
-function one() {
-    screen.textContent = screen.textContent+1
+function birthdaycount() {
+    const currentYear = new Date().getFullYear()
+    const birthday = new Date(`August 17 ${currentYear} 00:00:00`)
+    const currentDate =new Date()
+    const diff = birthday - currentDate
+    const day = Math.floor(diff/1000/60/60/24)
+    const hour = Math.floor((diff/1000/60/60)%24)
+    const minute = Math.floor((diff/1000/60)%60)
+    const second = Math.floor((diff/1000)%60)
+    days.textContent =day<10?"0"+day:day
+    hours.textContent =hour<10?"0"+hour:hour
+    minutes.textContent =minute<10?"0"+minute:minute
+    seconds.textContent =second<10?"0"+second:second
 }
-function two() {
-    screen.textContent = screen.textContent+2
-}
-function three() {
-     screen.textContent = screen.textContent+3
-}
-function four() {
-     screen.textContent = screen.textContent+4
-}
-function five() {
-    screen.textContent = screen.textContent+5
-}
-function six() {
-     screen.textContent = screen.textContent+6
-}
-function seven() {
-     screen.textContent = screen.textContent+7
-}
-function eight() {
-     screen.textContent = screen.textContent+8
-}
-function nine() {
-     screen.textContent = screen.textContent+9
-}
-function zero() {
-     screen.textContent = screen.textContent+0
-}
-function doublezero() {
-    screen.textContent = screen.textContent+0+0
-}
-function thrirplezero() {
-     screen.textContent = screen.textContent+0+0+0
-}
-
-//back
-function back() {
-    screen.textContent=screen.textContent.slice(0,-1)
-}
-
-//clear
-
-clear
-function ac() {
-    screen.textContent =""
-}
- 
-//operators
-
-function plus() {
-    screen.textContent = screen.textContent+ "+"
-}
-function minus() {
-    screen.textContent = screen.textContent+ "-"
-}
-function star() {
-    screen.textContent = screen.textContent+ "*"
-}
-function percent() {
-    screen.textContent = screen.textContent+ "%"
-}
-
-function enter() {
-    try{
-        screen.textContent = eval(screen.textContent)
-    }
-    catch{
-        screen.textContent = "invalid"
-    }
-}
+setInterval(birthdaycount,1000)

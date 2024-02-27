@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="inner">
+        <div class="calculator-back">
+            <div class="top">
+                <p id="screen"></p>
+            </div>
+            <div class="down">
+                <div class="boxes">
+                    <div class="box" onclick="one()">
+                        <h2 >1</h2>
+                    </div>
+                    <div class="box" onclick="two()">
+                        <h2 >2</h2>
+                    </div>
+                    <div class="box" onclick="three()">
+                        <h2 >3</h2>
+                    </div>
+                    <div class="box" onclick="ac()">
+                        <h2 >AC</h2>
+                    </div>
+                    
+                </div>
+                <div class="boxes">
+                    <div class="box" onclick="four()">
+                        <h2 >4</h2>
+                    </div>
+                    <div class="box" onclick="five()">
+                        <h2 >5</h2>
+                    </div>
+                    <div class="box" onclick="six()">
+                        <h2 >6</h2>
+                    </div>
+                    <div class="box" onclick="plus()">
+                        <h2 >+</h2>
+                    </div>
+                    
+                </div>
+                <div class="boxes">
+                    <div class="box" onclick="seven()">
+                        <h2 >7</h2>
+                    </div>
+                    <div class="box" onclick="eight()">
+                        <h2 >8</h2>
+                    </div>
+                    <div class="box" onclick="nine()">
+                        <h2 >9</h2>
+                    </div>
+                    <div class="box" onclick="minus()">
+                        <h2 >-</h2>
+                    </div>
+                    
+                </div>
+                <div class="boxes">
+                    <div class="box" onclick="zero()">
+                        <h2 >0</h2>
+                    </div>
+                    <div class="box" onclick="doublezero()">
+                        <h2 >00</h2>
+                    </div>
+                    <div class="box" onclick="thrirplezero()">
+                        <h2 >000</h2>
+                    </div>
+                    <div class="box" onclick="star()">
+                        <h2 >*</h2>
+                    </div>
+                    
+                </div>
+                <div class="boxes">
+                    <div class="box"id="enter" onclick="enter()">
+                        <h2 >Enter</h2>
+                    </div>
+                    <div class="box"  onclick="back()">
+                        <h2 ><i class="fa-regular fa-circle-xmark"></i></h2>
+                    </div>
+                    <div class="box"  onclick="percent()">
+                        <h2>%</h2>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
